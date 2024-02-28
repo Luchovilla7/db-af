@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+html{
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+body{
+    height: 100vh;
+}
+/* ******** */
+/* H O M E */
+/* ******** */
+.home{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url(img/fondo.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    height: 100vh;
+}
+.home header{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+.home .logo{
+    text-decoration: none;
+    color: #ffe50d;
+    font-size: 28px;
+    font-family: 'Mulish';
+}
+.home .menu{
+    font-size: 18px;
+    letter-spacing: 3px;
+    display: flex;
+    cursor: pointer;
+}
+.home .menu .barras{
+    width: 30px;
+    margin-left: 10px;
+}
+.home .menu .barras .linea{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin:5px 0;
+}
+.home .menu .barras .efecto{
+    width: 70%;
+    transition: .3s;
+}
+.home .menu:hover{
+    color: #ffe50d;
+}.home .menu:hover .barras .linea{
+    background-color: #ffe50d;
+}
+.home .menu:hover .barras .efecto{
+    width: 100%;
+}
+.home .contenido{
+    position: fixed;
+    left: 15%;
+}
+
+.home .contenido h1{
+    font-family: 'Mulish';
+    font-size: 120px;
+    line-height: 100px;
+    padding-top: 100px;
+    color: #ffe50d;
+}
+.home .contenido .descripcion{
+    margin-top: 20px;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+.home .contenido .color{
+    color: #ffe50d;
+}
+.home .contenido .redes{
+    margin-top: 50px;
+}
+.home .contenido .redes a{
+    color: #fff;
+    margin-right: 20px;
+    font-size: 20px;
+    transition: .5s;
+}
+.home .contenido .redes a:hover{
+    color:#ffe50d
+}
+/* ******** */
+/* MANGAS */
+/* ******** */
+.manga{
+    position: relative;
+    z-index: 100;
+    color: #fff;
+    background-color: #171819;
+}
+.titulo-seccion{
+    font-size: 12rem;
+    width: fit-content;
+    letter-spacing: 8px;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
+    position: relative;
+    transform: translateX(100px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.manga .fila{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+.manga .fila .col{
+    position: relative;
+    height: fit-content;
+    cursor: pointer;
+    transition: transform .3s;
+}
+.manga .fila  .col .detalle{
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    width: 100%;
+    transition: left .8s;
+    z-index: 10;
+}
+.manga .fila .col .detalle .titulo-proyecto{
+    font-size: 40px;
+    font-weight: 700;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+.manga .fila .col .detalle .descripcion-proyecto{
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.manga .fila .col  .img-proyecto{
+    width: 80%;
+    filter: brightness(65%);
+}
+.manga .fila .col:hover{
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(1deg);
+}
+.manga .fila .col:hover .info{
+    left: 0;
+}
+/* INFORMACIÓN */
+.info{
+    position: relative;
+    z-index: 100;
+    height: 100vh;
+    background-color: #fbfbfb;
+}
+.info .negro{
+    -webkit-text-stroke: 2px #888888;
+}
+.info h3{
+    color: #333;
+    font-size: 78px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+
+}
+.info .linea{
+    display: inline-block;
+    width: 50px;
+    background-color: #ffe50d;
+    height: 7px;
+}
+.info .descripcion{
+    max-width: 900px;
+    margin: auto;
+    font-size: 25px;
+    line-height: 45px;
+    font-weight: normal;
+    padding: 0 20px;
+}
+.info .descripcion a{
+     text-decoration: none;
+     color: #000;
+     font-weight: bold;
+     position: relative;
+     transition: .5s;
+}
+.info .descripcion a .efecto{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: #ffe50d;
+    border-bottom: 3px solid #ffe50d;
+    transition: .5s;
+}
+.info .descripcion a:hover .efecto{
+    height: 100%;
+    z-index: -1;
+}
+.info .descripcion a:hover{
+    color: #fff;
+}
+
+.footer {
+    padding: 38px 0 33px;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer p a {
+    text-decoration: none;
+    color: #ffe50d;
+}
+
+/* ******** */
+/* MENU DE NAVEGACION */
+/* ******** */
+.nav-menu{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.nav-menu a{
+    display: block;
+    text-decoration: none;
+    color: #fbfbfb;
+    font-size: 40px;
+    font-weight: bold;
+}
+.nav-menu a:hover{
+    color: #ffe50d;
+}
+
+.nav-menu button{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fbfbfb;
+    background-color: transparent;
+    color: #ffe50d;
+    font-size: 30px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: .5s;
+}
+.nav-menu button:hover{
+    background-color: #ffe50d;
+    color:#fff  ;
+}
+
+/* ******** */
+/* RESPONSIVE*/
+/* ******** */
+
+@media screen and (max-width:1200px){
+    .titulo-seccion{
+        font-size: 8rem;
+    }
+}
+@media screen and (max-width:900px){
+    .titulo-seccion{
+        font-size: 4rem;
+    }
+    .home .contenido{
+        left: 0;
+        width: 100%;
+    }
+    .home .redes{
+        text-align: center;
+    }
+    .home .descripcion{
+        text-align: center;
+    }
+    .home .contenido h1{
+        font-size: 100px;
+        text-align: center;
+        line-height: 90px;
+    }
+    .info .descripcion{
+        text-align: center;
+    }
+
+
+    .manga .fila{
+        display: block;
+    }
+    .manga .fila .col{
+        width: 50%;
+        margin: auto;
+    }
+
+
+
+    .info{
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .info h3{
+        font-size: 50px;
+        text-align: center;
+    }
+    .info .descripcion{
+        font-size: 25px;
+        line-height: normal;
+    }
+
+}
